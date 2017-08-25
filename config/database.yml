@@ -26,7 +26,7 @@ development:
   database: restaurant_development
   username: postgres
   password: 1234
-  port: 5433
+  port: 5432
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -86,4 +86,4 @@ production:
   database: restaurant_production
   username: postgres
   password: 1234
-  port: 5433
+  port: 5432

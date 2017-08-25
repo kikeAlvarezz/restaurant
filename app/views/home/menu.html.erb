@@ -7,11 +7,20 @@
 	</div>
 <% end %>
 
+<div class="card card-block">
+	<%= form_tag nil, method: 'get' do %>
+	<div class="form-inline">
+		<%= select_tag :sort_column, options_for_select([['Nombre','name'], ['Precio', 'price']]), class: 'form-control'%>
+		<%= select_tag :sort_direction, options_for_select([['Ascendiente','asc'], ['Descendiente','desc']]), class: 'form-control'%>
+		<%= submit_tag "Sort", class: "btn btn-secondary" %>
+		</div>
+	<% end %>
+</div>
 
 <% @food_items.each do |food_item| %>
 		<div class="card">
 			<div class="card-header">
-				<%= food_item.name %>
+				<%= food_item.name %>, $<%= food_item.price %>
 			</div>
 			<div class="card-block">
 				<%= image_tag food_item.image_url %>
